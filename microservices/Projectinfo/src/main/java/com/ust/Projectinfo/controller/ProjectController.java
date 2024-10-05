@@ -8,8 +8,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
-@RequestMapping
+@RequestMapping("/project")
 public class ProjectController {
 
     @Autowired
@@ -25,19 +27,10 @@ public class ProjectController {
     }
 
     @GetMapping("/project/{code}")
-    public ResponseEntity<Projectdto> getProject(@PathVariable long code) {
-        return ResponseEntity.ok(projectservice.getProject(code));
-    }
-
-    @PutMapping("/project/update")
-    public ResponseEntity<Projectdto> updateProject(@RequestBody Projectdto dto) {
-        return ResponseEntity.ok(projectservice.updateProject(dto));
+    public List<Project> getProject(@PathVariable long code) {
+        return projectservice.getProject(code);
     }
 
 
-    @DeleteMapping("/project/delete/{code}")
-    public ResponseEntity<String> deleteProject(@PathVariable long code) {
-        return ResponseEntity.ok(projectservice.deleteProject(code));
-    }
 
 }

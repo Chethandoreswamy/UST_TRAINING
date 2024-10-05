@@ -1,11 +1,12 @@
 package com.ust.Projectinfo.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -15,26 +16,9 @@ import lombok.NoArgsConstructor;
 public class Project {
 
     @Id
-    private long projectId;
-
-    private String projectInfo;
-
+    private long projectID;
     private String projectName;
-
-    private String projectManager;
-
-    private String teamMember;
-
-    private String projectStatus;
-
-    private String projectStartDate;
-
-    private String projectEndDate;
-
-    private double projectBudget;
-
-    private String companyName;
-
-    private long Cccode;
+    private List<String> technologyStack;
+    private long companyCode;
 
 }
