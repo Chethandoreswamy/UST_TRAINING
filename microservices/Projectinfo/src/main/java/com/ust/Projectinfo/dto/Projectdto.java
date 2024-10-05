@@ -21,8 +21,6 @@ public class Projectdto {
     @NotNull(message = "project name cannot be null")
     private String projectName;
 
-
-
     @NotNull(message = "project name cannot be null")
     private List<String> technologyStack;
 
