@@ -9,7 +9,7 @@ spring:
   application:
     name: Transaction
   datasource:
-    url: jdbc:mysql://localhost:3306/TransactionDB
+    url: jdbc:mysql://localhost:3306/Transactiondb
     username: root
     password: pass@word1
     driver-class-name: com.mysql.cj.jdbc.Driver
