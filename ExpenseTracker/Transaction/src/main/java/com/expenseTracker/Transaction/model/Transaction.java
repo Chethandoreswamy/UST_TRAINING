@@ -9,8 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.CurrentTimestamp;
 
+import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 @Data
@@ -25,8 +26,9 @@ public class Transaction {
     private String transactionType;
     private String transactionCategory;
     private double transactionAmount;
-    @CurrentTimestamp
-    private Date transactionDate;
     private String transactionDescription;
-    private long userId;
+    private Long userId;
+    private Timestamp transactionDate;
+
+    // Example method to extract the month from java.util.Date
 }
